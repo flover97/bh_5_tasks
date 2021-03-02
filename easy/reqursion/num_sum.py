@@ -3,3 +3,14 @@
 
 Можно пользоваться только функциями, операторами и условиями
 """
+
+
+def calc_sum(*args):
+    summa = 0
+    for i in args:
+        summa += i
+
+    return sum(args)
+
+
+print(calc_sum(1, 2, 3))
