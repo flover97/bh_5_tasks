@@ -13,4 +13,11 @@ def calc_sum(*args):
     return sum(args)
 
 
-print(calc_sum(1, 2, 3))
+if __name__ == '__main__':
+    some_values = []
+    while True:
+        value = input('Введите число: ')
+        if value == 'stop':
+            break
+        some_values.append(int(value))
+    print(calc_sum(*some_values))
