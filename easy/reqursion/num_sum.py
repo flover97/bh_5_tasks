@@ -5,19 +5,13 @@
 """
 
 
-def calc_sum(*args):
-    summa = 0
-    for i in args:
-        summa += i
-
-    return sum(args)
+def calc_sum(n: int):
+    if n <= 1:
+        return n
+    else:
+        return n + calc_sum(n - 1)
 
 
 if __name__ == '__main__':
-    some_values = []
-    while True:
-        value = input('Введите число: ')
-        if value == 'stop':
-            break
-        some_values.append(int(value))
-    print(calc_sum(*some_values))
+    summ = calc_sum(10)
+    print(summ)
